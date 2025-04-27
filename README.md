@@ -1,29 +1,67 @@
-# ToDoList
+ToDoList Vue
+Questa è una To-Do List creata con Vue 3, Vite e Firebase.
+Permette agli utenti di registrarsi, accedere e gestire una lista di task personali (aggiungere, modificare e cancellare).
+Ogni utente vede solo i propri task grazie all'integrazione con Firebase Authentication e Firestore Database.
 
-This template should help get you started developing with Vue 3 in Vite.
+Funzionalità principali
+Registrazione e Login tramite Firebase Authentication
 
-## Recommended IDE Setup
+Salvataggio dei task personali su Firestore
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Aggiunta, modifica e cancellazione dei task
 
-## Customize configuration
+Interfaccia semplice e pulita
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Come scaricare e avviare il progetto
+Clonare il repository
 
-## Project Setup
+bash
+Copia
+Modifica
+git clone https://github.com/Amro-ALMasry/ToDoList_vue.git
+Entrare nella cartella del progetto
 
-```sh
+bash
+Copia
+Modifica
+cd ToDoList_vue
+Installare le dipendenze
+
+bash
+Copia
+Modifica
 npm install
-```
+Avviare il server di sviluppo
 
-### Compile and Hot-Reload for Development
-
-```sh
+bash
+Copia
+Modifica
 npm run dev
-```
+Aprire il progetto nel browser
+(di solito sarà disponibile su http://localhost:5173 oppure ti verrà indicato nel terminale)
 
-### Compile and Minify for Production
+Tecnologie utilizzate
+Vue 3
 
-```sh
-npm run build
-```
+Vite
+
+Firebase Authentication
+
+Firebase Firestore Database
+
+Pinia per la gestione dello stato
+
+Vue Router
+
+Note
+🔒 Firebase Configuration:
+Il file src/firebase.js contiene la configurazione di Firebase.
+Per far funzionare il progetto devi avere un tuo progetto Firebase personale con Authentication e Firestore configurati.
+
+Comandi principali
+
+Comando	Descrizione
+npm install	Installa tutte le dipendenze
+npm run dev	Avvia il server di sviluppo
+npm run build	Compila il progetto per produzione
+Creato con ❤️ da Amro-ALMasry
