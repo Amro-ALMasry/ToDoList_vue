@@ -1,29 +1,78 @@
-# ToDoList
+# ToDoList Vue
 
-This template should help get you started developing with Vue 3 in Vite.
+Questa è una **To-Do List** creata con **Vue 3**, **Vite** e **Firebase**.  
+Permette agli utenti di **registrarsi**, **accedere** e **gestire una lista di task** personali (aggiungere, modificare e cancellare).  
+Ogni utente vede solo i propri task grazie all'integrazione con **Firebase Authentication** e **Firestore Database**.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Funzionalità principali
 
-## Customize configuration
+- Registrazione e Login tramite Firebase Authentication
+- Salvataggio dei task personali su Firestore
+- Aggiunta, modifica e cancellazione dei task
+- Interfaccia semplice e pulita
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## Come scaricare e avviare il progetto
 
-```sh
+1. **Clonare il repository**
+
+```bash
+git clone https://github.com/Amro-ALMasry/ToDoList_vue.git
+```
+
+2. **Entrare nella cartella del progetto**
+
+```bash
+cd ToDoList_vue
+```
+
+3. **Installare le dipendenze**
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+4. **Avviare il server di sviluppo**
 
-```sh
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+5. **Aprire il progetto nel browser**  
+   (di solito sarà disponibile su `http://localhost:5173` oppure ti verrà indicato nel terminale)
 
-```sh
-npm run build
-```
+---
+
+## Tecnologie utilizzate
+
+- [Vue 3](https://vuejs.org/)
+- [Vite](https://vitejs.dev/)
+- [Firebase Authentication](https://firebase.google.com/products/auth)
+- [Firebase Firestore Database](https://firebase.google.com/products/firestore)
+- [Pinia](https://pinia.vuejs.org/) per la gestione dello stato
+- [Vue Router](https://router.vuejs.org/)
+
+---
+
+## Note
+
+🔒 **Firebase Configuration**:  
+Il file `src/firebase.js` contiene la configurazione di Firebase.  
+Per far funzionare il progetto devi avere un tuo progetto Firebase personale con Authentication e Firestore configurati.
+
+---
+
+## Comandi principali
+
+| Comando         | Descrizione                        |
+| --------------- | ---------------------------------- |
+| `npm install`   | Installa tutte le dipendenze       |
+| `npm run dev`   | Avvia il server di sviluppo        |
+| `npm run build` | Compila il progetto per produzione |
+
+---
+
+> Creato con ❤️ da [Amro-ALMasry](https://github.com/Amro-ALMasry)
