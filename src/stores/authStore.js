@@ -1,7 +1,8 @@
 // stores/authStore.js
 import { defineStore } from 'pinia';
 import { auth } from '../firebase'; // il tuo file firebase.js
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import {useListaToDo} from './ListaCondivisa.js'
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth';
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
@@ -50,6 +51,24 @@ export const useAuthStore = defineStore('auth', {
       } catch (error) {
         this.errorMessage = error.message;
       }
-    }
+    },
+
+        // 🔥 Nuova funzione: controlla l'utente già loggato
+        listenToAuthState() {
+          const ToDoCondiviso = useListaToDo()
+          onAuthStateChanged(auth, (user) => {
+            if (user) {
+              this.user = user;
+              this.AccountAttivoOra = user.email;
+              ToDoCondiviso.loadTasks();
+              console.log("Utente già loggato:", this.AccountAttivoOra);
+            } else {
+              this.user = null;
+              this.AccountAttivoOra = "";
+              console.log("Nessun utente loggato");
+            }
+          });
+          return true;
+        }
   }
 });
